@@ -32,15 +32,73 @@
  margin-bottom: 2px;
  color: #227;
  }
- p, div.price_line {
+ p {
  margin-left: 100px;
  margin-top: 0.5em;
  margin-bottom: 0.8em;
+ }
+ div.price_line {
+ margin-left: 100px;
+ margin-top: 0.5em;
+ margin-bottom: 0.8em;
+ }
+ 
+ form, div {
+ display: inline;
+ padding-bottom: 0.5em;
  }
  .price {
  color: #44a;
  font-weight: bold;
  margin-right: 3em;
+ text-align: center;
  }
  }
+ .container-fluid {
+ background-color: #D4D4D4; /// color of container
+ margin: 0px auto;
+ padding-right:24px;
+ padding-left:24px;
+ }
+ //////////////////////////
+//  table {
+//  border-top: collapse;
+//   margin:0 auto;
+//   text-align:center;
+//   width:1000px;
+// }
+// table tr td {
+//  padding: 10px;
+//  vertical-align: top;
+// }
+// .list_image {
+//  width: 60px;
+//  height: 70px;
+// }
+// .list_description {
+//  width: 60%;
+//  dl {
+//  margin: 0;
+//  }
+//  dt {
+//  color: #244;
+//  font-weight: bold;
+//  font-size: larger;
+//  }
+//  dd {
+//  margin: 0;
+//  }
+// }
+//  .list_actions {
+//  font-size: x-small;
+//  
+//  padding-left: 1em;
+//  }
+//  .list_line_even {
+//  background: #98FF98;
+//  }
+//  .list_line_odd {
+//  background: #FFCC99;
+// }
+////////////////////
 } 
