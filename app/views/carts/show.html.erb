@@ -1,9 +1,23 @@
 <% if notice %>
 <p id="notice"><%= notice %></p>
 <% end %>
-<h2>Ваша корзина :</h2>
-<ul>
- <% @cart.line_items.each do |item| %>
- <li><%= item.product.title %> : <b><%= item.quantity %> шт. </b></li><hr>
- <% end %>
-</ul>
+
+<h2>Ваша корзина</h2>
+<div class="table-responsive">
+<table class="table table-striped">
+<% @cart.line_items.each do |item| %>
+    <tr>
+    <td><%= item.quantity %> шт. </td>
+    <td>:: <%= item.product.title %></td>
+    <td class="item_price"><%= number_to_currency(item.total_price) %></td>
+    <td><%= button_to 'Delete Line Item', item, :method => :delete, :confirm => 'Are You Sure' %></td>
+    </tr>
+<% end %>
+ <tr class="success">
+ <td colspan="2"><b>Сумма: </b></td>
+  <td class="info"><b><%= number_to_currency(@cart.total_price) %></b></td>
+ </tr>
+ </table>
+</div>
+
+<%= button_to 'Очистить корзину', @cart, method: :delete, class: "btn btn-info btn-sm", data: { confirm: 'Are you sure?' } %>
