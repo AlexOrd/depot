@@ -30,7 +30,13 @@
          float: left;
      }
  }
-
+  #banner2 {
+     //background: #006699;
+      padding: 10px;
+     // border-bottom: 2px solid;
+     // font: small-caps 40px/40px "Times New Roman", serif;
+     // text-align: center;
+  }
  #notice {
      color: #000 !important;
      border: 2px solid red;
@@ -54,9 +60,9 @@
  }
  #side {
      padding: 0.5em 0.5em;
-     background: #FF9933;
+     background: #006699;
      ul {
-         padding: 0;
+         padding: 1em;
          li {
              list-style: none;
              padding: 0.5em 0.5em;

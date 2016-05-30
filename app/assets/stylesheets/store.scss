@@ -6,18 +6,21 @@
 // (Что такое Sass (SCSS) можно узнать здесь: http://sass-lang.com/)
  .store {
  h1 {
- margin: 0;
- padding-bottom: 0.5em;
- font: 150%;
- color: #226;
- border-bottom: 3px dotted #77d;
+ font-family: inherit;
+ font-weight: 500;
+ //padding-bottom: 0.5em;
+ font: 120%;
+ font: small-caps 40px/40px "Times New Roman", serif;
+ color: #330066;
+ //border-bottom: 10px #6699CC;
+ text-align: left;
 }
 /* Запись в каталоге store */
 .entry {
  overflow: auto;
  margin-top: 1em;
  border-bottom: 1px dotted #77d;
- min-height: 100px;
+ min-height: 133px;
  img {
  width: 80px;
  margin-right: 5px;
@@ -60,6 +63,13 @@
  padding-right:24px;
  padding-left:24px;
  }
+ // .book {
+ // background-color: #660099; /// color of container
+ // padding-right: 15px;
+ // padding-left: 15px;
+ // margin-right: auto;
+ // margin-left: auto;
+ // }
  //////////////////////////
 //  table {
 //  border-top: collapse;
