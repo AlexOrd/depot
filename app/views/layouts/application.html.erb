@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-   <title>Магазин книг ПРОГ</title>
+   <title>Книжный магазин</title>
 
     <%= csrf_meta_tags %>
 
@@ -45,6 +45,11 @@
     
     <div id="columns">
       <div id="side">
+      <!--korzina-->
+      <div id="cart">
+           <%= render @cart %>
+      </div>
+      
          <ul>
          <li><a href="http://www....">Главная</a></li>
          <li><a href="http://www..../faq">Вопросы</a></li>

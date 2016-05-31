@@ -3,7 +3,7 @@
 <% end %>
 
 <div class="container-fluid">
-<h1>Книжная полка </h1>
+<h1><span class="glyphicon glyphicon-book" aria-hidden="true"></span> Книжная полка </h1>
 <hr>
 <% cache ['store', Product.latest] do %>
     <% @products.each do |product| %>
@@ -15,8 +15,9 @@
              <%= sanitize(product.description) %>
          <div class="price_line">
              <span class="price"><%= number_to_currency(product.price) %></span>
+             <%= flash_messages %>
              <%= button_to "В корзину", line_items_path(product_id: product),
-                             class: "btn btn-primary btn-xs" %>
+                             class: "btn btn-primary btn-xs", remote: true %>
          </div>
      </div>
     </div>

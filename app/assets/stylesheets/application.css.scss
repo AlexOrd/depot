@@ -15,7 +15,7 @@
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
-
+// http://colorscheme.ru/#4yd1T--iYw0w0
  body, body > p, body > ol, body > ul, body > td {margin: 8px !important}
 
  #banner {
@@ -39,10 +39,10 @@
   }
  #notice {
      color: #000 !important;
-     border: 2px solid red;
+     border: 2px solid #CC6699;
      padding: 1em;
      margin-bottom: 2em;
-     background-color: #6633CC;
+     background-color: #D9EDF7;
      font: bold smaller sans-serif;
  }
 
@@ -54,13 +54,13 @@
     background: #141;
     display: flex;
  #main {
-     padding: 1em;
+     padding: 0.3em;
      background: white;
      flex: 1;
  }
  #side {
      padding: 0.5em 0.5em;
-     background: #006699;
+     background: #330033;
      ul {
          padding: 1em;
          li {

@@ -34,7 +34,8 @@ class LineItemsController < ApplicationController
     respond_to do |format|
       if @line_item.save
         #KORZINA
-        format.html { redirect_to @line_item.cart }
+        format.html { redirect_to store_url }
+        format.js
         format.json { render :show, status: :created, location: @line_item }
       else
         format.html { render :new }
@@ -62,9 +63,10 @@ class LineItemsController < ApplicationController
   def destroy
     @line_item = LineItem.find(params[:id])
     @line_item.destroy
-
+    set_cart
     respond_to do |format|
-      format.html { redirect_to @line_item.cart }
+      format.html { redirect_to store_url }
+      format.js
       format.json { head :no_content }
     end
   end
