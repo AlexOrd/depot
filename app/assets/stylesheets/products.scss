@@ -2,7 +2,11 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .products {
- text-align:center;
+
+p {
+ padding: 1em;
+ flex: 1;
+}
 
 table {
  border-top: collapse;

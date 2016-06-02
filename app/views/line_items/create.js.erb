@@ -1,1 +1,8 @@
+if ($('#cart tr').length == 1) { $('#cart').show('blind', 1000); }
 $('#cart').html("<%= escape_javascript render(@cart) %>");
+<!--animate new item-->
+$('#magaz-ico').css({'color':'#DFF0D8'}).
+animate({'color':'#333333'}, 3000);
+<!--2-->
+$('#current_item').css({'background-color':'#88ff88'}).
+animate({'background-color':'#F5F5F5'}, 1000);

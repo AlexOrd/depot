@@ -44,19 +44,40 @@
     
     
     <div id="columns">
+<% if @cart %>
       <div id="side">
-      <!--korzina-->
-      <div id="cart">
-           <%= render @cart %>
+      <!--korzina div-->
+      <div id="cart"
+         <% if @cart.line_items.empty? %>
+         style="display: none"
+         
+      > <!--div end :) -->
+         <%= render(@cart) %>
       </div>
-      
-         <ul>
-         <li><a href="http://www....">Главная</a></li>
-         <li><a href="http://www..../faq">Вопросы</a></li>
-         <li><a href="http://www..../news">Новости</a></li>
-         <li><a href="http://www..../contact">Контакты</a></li>
-         </ul>
+      <% end %>
+         <div class="list-group" >
+  <a href="#" class="list-group-item active">
+    <h4 class="list-group-item-heading">Вся книжная полка</h4>
+  </a>
+  <a href="#" class="list-group-item">
+    <h4 class="list-group-item-heading"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>  Новинки</h4>
+  </a>
+  <a href="#" class="list-group-item">
+    <h4 class="list-group-item-heading"><span class="glyphicon glyphicon-modal-window" aria-hidden="true"></span>  Техника</h4>
+  </a>
+  <a href="#" class="list-group-item">
+    <h4 class="list-group-item-heading"><span class="glyphicon glyphicon-tree-deciduous" aria-hidden="true"></span>  Природа</h4>
+  </a>
+  <a href="#" class="list-group-item">
+    <h4 class="list-group-item-heading"><span class="glyphicon glyphicon-globe" aria-hidden="true"></span>  Космос</h4>
+  </a>
+  <a href="#" class="list-group-item"><h4></h4></a>
+  <a href="#" class="list-group-item"><h4></h4></a>
+  <a href="#" class="list-group-item"><h4></h4></a>
+</div>
       </div>
+<% end %>
+<!--side products off-->
       <div id="main">
          <%= yield %><!-- -->
       </div>

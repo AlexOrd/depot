@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing products</h1>
+<h1 align="center">Список товаров</h1>
 
 <table>
 <% @products.each do |product| %> 
@@ -19,10 +19,10 @@
  </td>
 
  <td class="list_actions">
- <%= link_to 'Show', product %><br/>
- <%= link_to 'Edit', edit_product_path(product) %><br/>
- <%= link_to 'Destroy', product, method: :delete,
- data: { confirm: 'Are you sure?' } %>
+ <%= link_to 'Подробно', product %><br/>
+ <%= link_to 'Изменить', edit_product_path(product) %><br/>
+ <%= link_to 'Удалить', product, method: :delete,
+ data: { confirm: 'Вы уверены?' } %>
  </td>
  </tr>
 <% end %>
@@ -30,4 +30,6 @@
 
 <br />
 
-<a class="btn btn-warning btn-lg" text-align= "center" href="<%= new_product_path %>" role="button">New product</a>
+<a class="btn btn-warning btn-lg btn-block" text-align= "center" href="<%= new_product_path %>" role="button">Создать новый продукт</a>
+
+

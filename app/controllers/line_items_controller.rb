@@ -35,7 +35,7 @@ class LineItemsController < ApplicationController
       if @line_item.save
         #KORZINA
         format.html { redirect_to store_url }
-        format.js
+        format.js { @current_item = @line_item }
         format.json { render :show, status: :created, location: @line_item }
       else
         format.html { render :new }
@@ -66,7 +66,7 @@ class LineItemsController < ApplicationController
     set_cart
     respond_to do |format|
       format.html { redirect_to store_url }
-      format.js
+      format.js 
       format.json { head :no_content }
     end
   end

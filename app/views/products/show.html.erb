@@ -1,24 +1,25 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
+<p class="bg-primary">
+  <strong>Название товара:</strong>
   <%= @product.title %>
 </p>
 
-<p>
-  <strong>Description:</strong>
+<p class="bg-info">
+  <strong>Описание товара:</strong>
   <%= @product.description %>
 </p>
 
-<p>
-  <strong>Image url:</strong>
+<p class="bg-info">
+  <strong>Изображение товара:</strong>
   <%= image_tag(@product.image_url, class: 'list_image') %>
+  <% @product.image_url %>
 </p>
 
-<p>
-  <strong>Price:</strong>
+<p class="bg-info">
+  <strong>Цена товара:</strong>
   <%= @product.price %><br/>
 </p>
 
-<%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %>
+<%= link_to 'Изменить', edit_product_path(@product) %> |
+<%= link_to 'Назад', products_path %>
